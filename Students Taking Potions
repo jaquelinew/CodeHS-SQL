@@ -1,0 +1,11 @@
+SELECT
+  P.last_name,
+  P.first_name
+FROM
+  Enrollment E
+JOIN
+  Person P ON E.person = P.id
+WHERE
+  E.course = 1 -- Assuming 1 represents the Potions course
+ORDER BY
+  P.last_name ASC;
