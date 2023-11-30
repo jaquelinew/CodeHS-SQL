@@ -1,0 +1,13 @@
+SELECT
+  P.last_name,
+  P.first_name
+FROM
+  Enrollment E
+JOIN
+  Person P ON E.person = P.id
+JOIN
+  House H ON P.house = H.id
+WHERE
+  E.course = 1 AND H.name <> 'Slytherin' -- Assuming 1 represents the Potions course
+ORDER BY
+  P.last_name ASC;
