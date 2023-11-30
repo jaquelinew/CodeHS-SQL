@@ -1,0 +1,12 @@
+SELECT
+  p.first_name,
+  p.last_name,
+  h.name AS house
+FROM
+  Person p
+JOIN
+  House h ON p.house = h.id
+WHERE
+  p.house = 1 -- Assuming Gryffindor has an id of 1
+ORDER BY
+  p.first_name ASC;
