@@ -1,0 +1,11 @@
+SELECT
+  last_name AS Family,
+  COUNT(id) AS Count
+FROM
+  Person
+GROUP BY
+  last_name
+HAVING
+  COUNT(id) > 1
+ORDER BY
+  Count DESC, Family;
